@@ -4,43 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Add Round Note - Smart Care Assistant</title>
-  <link rel="stylesheet" href="add.css" />
+  <link rel="stylesheet" href="style/add1.css" />
 </head>
 <body>
-  <div class="note-container">
-    <h2>Add / Update Round Note</h2>
+  <div class="dashboard-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <h2 class="logo">SmartCare</h2>
+      <nav>
+        <ul>
+          <li><a href="doctor-dashboar.html" >🏠 Dashboard</a></li>
+          <li><a href="patient.html">👥 Patients</a></li>
+          <li><a href="add-note.html">📝 Add Note</a></li>
+          <li><a href="prescriptions.html">💊 Prescriptions</a></li>
+          <li><a href="trends.html">📈 Trends</a></li>
+          <li><a href="add-p.html" class="active">📈 Add</a></li>
+          <li><a href="adr-alerts.html">⚠️ ADR Alerts</a></li>
+          <li><a href="reports.html">📄 Reports</a></li>
+          <li><a href="settings.html">⚙️ Settings</a></li>
+          <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-    <form id="roundNoteForm">
-      <!-- Patient selection -->
-      <label for="patientSelect">Select Patient:</label>
-      <select id="patientSelect" required>
-        <option value="">Loading patients...</option>
-      </select>
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="note-container">
+        <h2>Add / Update Round Note</h2>
 
-      <!-- Vitals -->
-      <h3>Vitals</h3>
-      <input type="text" id="bp" placeholder="Blood Pressure (e.g., 120/80)" />
-      <input type="text" id="hr" placeholder="Heart Rate (bpm)" />
-      <input type="text" id="spo2" placeholder="SpO2 (%)" />
-      <input type="text" id="temp" placeholder="Temperature (°C)" />
-      <input type="text" id="rr" placeholder="Respiratory Rate" />
+        <form id="roundNoteForm">
+          <label for="patientSelect">Select Patient:</label>
+          <select id="patientSelect" required>
+            <option value="">Loading patients...</option>
+          </select>
 
-      <!-- Symptoms -->
-      <h3>Symptoms</h3>
-      <textarea id="symptoms" rows="3" placeholder="Describe symptoms..."></textarea>
-      <button type="button" id="addTemplate">🩺 Use Common Symptoms</button>
+          <h3>Vitals</h3>
+          <input type="text" id="bp" placeholder="Blood Pressure (e.g., 120/80)" />
+          <input type="text" id="hr" placeholder="Heart Rate (bpm)" />
+          <input type="text" id="spo2" placeholder="SpO2 (%)" />
+          <input type="text" id="temp" placeholder="Temperature (°C)" />
+          <input type="text" id="rr" placeholder="Respiratory Rate" />
 
-      <!-- Notes -->
-      <h3>Notes</h3>
-      <textarea id="noteText" rows="4" placeholder="Additional notes..."></textarea>
-      <button type="button" id="voiceBtn">🎙️ Voice-to-Text</button>
+          <h3>Symptoms</h3>
+          <textarea id="symptoms" rows="3" placeholder="Describe symptoms..."></textarea>
+          <button type="button" id="addTemplate">🩺 Use Common Symptoms</button>
 
-      <button type="submit">Save Note</button>
-    </form>
+          <h3>Notes</h3>
+          <textarea id="noteText" rows="4" placeholder="Additional notes..."></textarea>
+          <button type="button" id="voiceBtn">🎙️ Voice-to-Text</button>
 
-    <div id="statusMessage"></div>
+          <button type="submit">💾 Save Note</button>
+        </form>
+
+        <div id="statusMessage"></div>
+      </div>
+    </main>
   </div>
 
-  <script type="module" src="add.js"></script>
+  <script type="module" src="scripts/add.js"></script>
 </body>
 </html>
