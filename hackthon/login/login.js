@@ -42,7 +42,7 @@ document.getElementById("loginForm")?.addEventListener("submit", async function 
     }
 
     if (userData.role === "doctor") {
-      window.location.href = "doctor-dashboard.html";
+      window.location.href = "doctor-dashboar.html";
     } else {
       window.location.href = "patient-dashboard.html";
     }
